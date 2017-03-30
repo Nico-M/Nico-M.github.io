@@ -324,7 +324,62 @@
       
         
           
-            <p>今天在大神的推荐下,看到这款酷炫的博客,赶脚很漂亮的说,然后就安装了一下,下面说一下安装的过程.</p>
+            <h1 id="HEXO简易安装"><a href="#HEXO简易安装" class="headerlink" title="HEXO简易安装"></a>HEXO简易安装</h1><p>今天看到了一篇大神的博客,界面非常的简洁炫酷,顿时燃起了我的那颗折腾的心.</p>
+<p>原来是HEXO,搭配的主题真的十分好看,实战起来.</p>
+<h3 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1.准备工作"></a>1.准备工作</h3><ol>
+<li>安装<code>node</code> ,这个是每个程序员的必备额,配好<code>cnpm</code>方便下载模块包</li>
+<li>穷屌丝没有主机怎么办,可以用github的page,程序猿不可能没有github账号,注册一个,新建一个库,命名方式<code>username.github.io</code>,这样可以不用在后边的配置里重新配置根目录,如果你你是放在其他目录下,则需要改写根目录,不然,就会像我一样傻傻折腾半天.</li>
+</ol>
+<h3 id="2-初始化HEXO"><a href="#2-初始化HEXO" class="headerlink" title="2.初始化HEXO"></a>2.初始化HEXO</h3><p>官网上面的提示一目了然,直接按那个来</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div><div class="line">hexo init blog</div><div class="line">cd blog</div><div class="line">npm install</div><div class="line">hexo server</div></pre></td></tr></table></figure>
+<p>现在应该在本地就可以跑起来了.</p>
+<h3 id="3-安装主题"><a href="#3-安装主题" class="headerlink" title="3.安装主题"></a>3.安装主题</h3><p>前面提到的主题就是<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NEXT</a> </p>
+<p><img src="/img/NextSchemes3.png" alt="NextSchemes3"></p>
+<p>使用方法:</p>
+<ol>
+<li><p>打开你的博客目录,首先克隆这个主题</p>
+<p><code>cd your-hexo-site</code></p>
+<p><code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code></p>
+</li>
+</ol>
+<p>2.修改根目录下的配置文件 <img src="../img/image.png" alt="image">  <img src="../img/image1.png" alt="image1"></p>
+<ol>
+<li>然后你就可以在自己服务器跑一下,看看效果有没有出来(<code>hexo g</code> <code>hexo s</code>) </li>
+</ol>
+<h3 id="4-github-page发布"><a href="#4-github-page发布" class="headerlink" title="4.github page发布"></a>4.github page发布</h3><ol>
+<li><p>同样是修改上图中的 <em>_config.yml</em> 文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  //下面填上你的库源码地址</div><div class="line">  repo: &lt;repository url&gt;</div><div class="line">  //可以命名为master,直接在主分支上</div><div class="line">  branch: [branch]</div></pre></td></tr></table></figure>
+<p>repository url获取:<br><img src="../img/image3.png" alt="image3"></p>
+</li>
+<li><p>生成以及部署 </p>
+<p>首先需要安装一个模块:<code>npm install hexo-deployer-git --save</code></p>
+<p>然后执行<code>hexo d</code> 就可以发布了,当中应该会让你输入github账号和密码</p>
+</li>
+<li><p>如果是使用前面提到过的在其他目录下创建的库,可能发布后,会出不来页面,我之前遇到过无法加载js和css样式,这里应该是要更改如下地方:</p>
+<p><img src="../img/image4.png" alt="image4"></p>
+</li>
+<li><p>发布文章:</p>
+<p><code>hexo new test</code></p>
+</li>
+</ol>
+<h3 id="5-其他配置-我也没开始使用-哈哈"><a href="#5-其他配置-我也没开始使用-哈哈" class="headerlink" title="5.其他配置(我也没开始使用,哈哈)"></a>5.其他配置(<del>我也没开始使用,哈哈</del>)</h3><ol>
+<li><p>贴标签</p>
+<p> 确认站点,主题的两个配置文件有<code>tags:tags</code></p>
+<p> 新建tags页面<code>hexo new page tags</code> </p>
+<p> 修改 <em>source/tags/index.md</em> </p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: tags</div><div class="line">date: 2015-10-20 06:49:50</div><div class="line">type: &quot;tags&quot;</div><div class="line">comments: false</div></pre></td></tr></table></figure>
+<blockquote>
+<p>date 可保持系统生成的时间，</p>
+</blockquote>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">type: &quot;tags&quot;</div><div class="line">comments: false</div></pre></td></tr></table></figure>
+</li>
+<li><p>在文章中添加tags</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">tags: </div><div class="line">	- Tag1</div><div class="line">	- Tag2</div><div class="line">	- Tag3</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<p>最后,欢迎访问我的网站! <a href="https://nico-m.github.io/" target="_blank" rel="external">https://nico-m.github.io/</a> </p>
+</blockquote>
 
           
         
