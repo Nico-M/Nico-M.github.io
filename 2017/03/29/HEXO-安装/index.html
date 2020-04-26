@@ -32,7 +32,7 @@
 <meta property="og:image" content="http://www.jianshu.com/img/image3.png">
 <meta property="og:image" content="http://www.jianshu.com/img/image4.png">
 <meta property="article:published_time" content="2017-03-29T09:40:58.000Z">
-<meta property="article:modified_time" content="2020-04-26T10:11:47.137Z">
+<meta property="article:modified_time" content="2020-04-26T10:26:11.183Z">
 <meta property="article:author" content="Nico M">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.jianshu.com/img/NextSchemes3.png">
@@ -186,7 +186,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-04-26 18:11:47" itemprop="dateModified" datetime="2020-04-26T18:11:47+08:00">2020-04-26</time>
+                <time title="Modified: 2020-04-26 18:26:11" itemprop="dateModified" datetime="2020-04-26T18:26:11+08:00">2020-04-26</time>
               </span>
 
           
@@ -298,6 +298,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -445,6 +446,26 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '0bbfd9ba02f73920022f',
+      clientSecret: '49f720e53279952a52318579fbd45885d4270a84',
+      repo        : 'Nico-M.github.io',
+      owner       : 'Nico-M',
+      admin       : ['Nico-M'],
+      id          : 'bbffcc78f3f2a4108d8516b2a24ebb2d',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>
