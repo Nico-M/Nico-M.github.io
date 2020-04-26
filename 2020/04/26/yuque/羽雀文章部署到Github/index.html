@@ -20,27 +20,41 @@
     var CONFIG = {"hostname":"www.jianshu.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Nico酱的小站">
-<meta property="og:url" content="http://www.jianshu.com/u/d79514dbf379/index.html">
+  <meta name="description" content="前言: github page 还是三年前配置的,最近心血来潮,就想把他更新一下.没想到一下整出来很多新东西.  Hexo 和 nexT 主题的更新nexT  还是那么的漂亮和优雅,不再折腾样式了.当前更新了hexo-cli,然后又把nexT主题更到了最新版本.然后一执行命令就挂掉了,报的很奇葩的错: Unhandled rejection Template render error .后面查询">
+<meta property="og:type" content="article">
+<meta property="og:title" content="羽雀文章部署到Github">
+<meta property="og:url" content="http://www.jianshu.com/u/d79514dbf379/2020/04/26/yuque/%E7%BE%BD%E9%9B%80%E6%96%87%E7%AB%A0%E9%83%A8%E7%BD%B2%E5%88%B0Github/index.html">
 <meta property="og:site_name" content="Nico酱的小站">
+<meta property="og:description" content="前言: github page 还是三年前配置的,最近心血来潮,就想把他更新一下.没想到一下整出来很多新东西.  Hexo 和 nexT 主题的更新nexT  还是那么的漂亮和优雅,不再折腾样式了.当前更新了hexo-cli,然后又把nexT主题更到了最新版本.然后一执行命令就挂掉了,报的很奇葩的错: Unhandled rejection Template render error .后面查询">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1341953/1587890456265-f7726466-b243-491c-8931-59740767b332.png#align=left&display=inline&height=760&margin=%5Bobject%20Object%5D&name=WX20200426-163958%402x.png&originHeight=760&originWidth=1366&size=120126&status=done&style=none&width=1366">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1341953/1587890525244-1c350c61-24ca-40b6-a40b-78f8d918913c.png#align=left&display=inline&height=105&margin=%5Bobject%20Object%5D&name=WX20200426-164139%402x.png&originHeight=364&originWidth=2402&size=103163&status=done&style=none&width=690">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1341953/1587891569441-a5f9c211-9e4a-4e08-95fa-cb463fda594a.png#align=left&display=inline&height=334&margin=%5Bobject%20Object%5D&name=image.png&originHeight=482&originWidth=889&size=31720&status=done&style=none&width=616">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1341953/1587892096053-aac68137-40d7-401a-bf4b-98d7d0aca395.png#align=left&display=inline&height=485&margin=%5Bobject%20Object%5D&name=image.png&originHeight=661&originWidth=903&size=38481&status=done&style=none&width=663">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1341953/1587892781179-f709b0c6-98f3-497c-8e56-11d558a631bf.png#align=left&display=inline&height=273&margin=%5Bobject%20Object%5D&name=image.png&originHeight=546&originWidth=462&size=25644&status=done&style=none&width=231">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1341953/1587892884029-984a0412-3fba-434b-942b-ea3d8085a3cc.png#align=left&display=inline&height=384&margin=%5Bobject%20Object%5D&name=image.png&originHeight=952&originWidth=1638&size=90429&status=done&style=none&width=660">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1341953/1587893916747-d79789f4-2c1e-403e-a173-62371c93ccb7.png#align=left&display=inline&height=645&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1290&originWidth=2132&size=200521&status=done&style=none&width=1066">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1341953/1587893564911-950f5b0a-d315-4a90-bbc5-f54d4509fd85.png#align=left&display=inline&height=448&margin=%5Bobject%20Object%5D&name=image.png&originHeight=938&originWidth=1508&size=175679&status=done&style=none&width=720">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1341953/1587894862044-31fe80dd-45be-4d3c-92ef-cbb47bbd5849.png#align=left&display=inline&height=432&margin=%5Bobject%20Object%5D&name=image.png&originHeight=864&originWidth=2058&size=126708&status=done&style=none&width=1029">
+<meta property="article:published_time" content="2020-04-25T16:16:04.000Z">
+<meta property="article:modified_time" content="2020-04-26T10:12:03.993Z">
 <meta property="article:author" content="Nico M">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2020/png/1341953/1587890456265-f7726466-b243-491c-8931-59740767b332.png#align=left&display=inline&height=760&margin=%5Bobject%20Object%5D&name=WX20200426-163958%402x.png&originHeight=760&originWidth=1366&size=120126&status=done&style=none&width=1366">
 
-<link rel="canonical" href="http://www.jianshu.com/u/d79514dbf379/">
+<link rel="canonical" href="http://www.jianshu.com/u/d79514dbf379/2020/04/26/yuque/%E7%BE%BD%E9%9B%80%E6%96%87%E7%AB%A0%E9%83%A8%E7%BD%B2%E5%88%B0Github/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-Hans'
   };
 </script>
 
-  <title>Nico酱的小站</title>
+  <title>羽雀文章部署到Github | Nico酱的小站</title>
   
 
 
@@ -139,9 +153,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
@@ -157,10 +172,9 @@
       <meta itemprop="name" content="Nico酱的小站">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/26/yuque/%E7%BE%BD%E9%9B%80%E6%96%87%E7%AB%A0%E9%83%A8%E7%BD%B2%E5%88%B0Github/" class="post-title-link" itemprop="url">羽雀文章部署到Github</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          羽雀文章部署到Github
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -184,7 +198,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <blockquote>
+        <blockquote>
 <p>前言: github page 还是三年前配置的,最近心血来潮,就想把他更新一下.没想到一下整出来很多新东西.</p>
 </blockquote>
 <h4 id="Hexo-和-nexT-主题的更新"><a href="#Hexo-和-nexT-主题的更新" class="headerlink" title="Hexo 和 nexT 主题的更新"></a>Hexo 和 nexT 主题的更新</h4><p><a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">nexT</a>  还是那么的漂亮和优雅,不再折腾样式了.当前更新了<code>hexo-cli</code>,然后又把<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">nexT</a>主题更到了最新版本.<br>然后一执行命令就挂掉了,报的很奇葩的错: <code>Unhandled rejection Template render error</code> .后面查询官网说到应该是由旧版本升级到 <em>7.0</em>  版本时,有些包已经过时了,可以通过命令查看: <code>npm outdated</code> ;<br>检查 package 里面的依赖包也很旧了,很多包的版本还是 <em>0.0.\</em> *版本,手动改了版本更新后 <code>hexo server</code>  就可以正常运行了.</p>
@@ -262,172 +276,30 @@
 <li>Actions 官网中文: <a href="https://help.github.com/cn/actions" target="_blank" rel="noopener">https://help.github.com/cn/actions</a></li>
 </ol>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://www.jianshu.com/u/d79514dbf379/2017/03/30/%E7%9C%8B%E6%BC%AB%E7%94%BB-%E5%AD%A6redux-%E8%BD%AC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nico M">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nico酱的小站">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/03/30/%E7%9C%8B%E6%BC%AB%E7%94%BB-%E5%AD%A6redux-%E8%BD%AC/" class="post-title-link" itemprop="url">看漫画,学redux(转)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2017-03-30 15:27:47" itemprop="dateCreated datePublished" datetime="2017-03-30T15:27:47+08:00">2017-03-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-04-26 18:11:47" itemprop="dateModified" datetime="2020-04-26T18:11:47+08:00">2020-04-26</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a href="https://github.com/jasonslyvia/a-cartoon-intro-to-redux-cn" target="_blank" rel="noopener">《看漫画，学 Redux》 —— A cartoon intro to Redux(转)</a></p>
-<blockquote>
-<p>不写一行代码，轻松看懂 Redux 原理。 <a href="https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6" target="_blank" rel="noopener">原文</a></p>
-<p>如果你有任何疑惑，不妨在 <a href="https://github.com/jasonslyvia/a-cartoon-intro-to-redux-cn/issues" target="_blank" rel="noopener">Issues</a> 中提出。</p>
-</blockquote>
-<p>Flux 架构已然让人觉得有些迷惑，而比 Flux 更让人摸不着头脑的是 Flux 与 Redux 的区别。Redux 是一个基于 Flux 思想的新架构方式，本文将探讨它们的区别。</p>
-<p>如果你还没有看过<a href="https://code-cartoons.com/a-cartoon-guide-to-flux-6157355ab207" target="_blank" rel="noopener">这篇关于 Flux 的文章</a>（译者注：也可以参考<a href="https://www.zhihu.com/question/33864532/answer/57657275" target="_blank" rel="noopener">这篇</a>），你应该先阅读一下。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2017/03/30/%E7%9C%8B%E6%BC%AB%E7%94%BB-%E5%AD%A6redux-%E8%BD%AC/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://www.jianshu.com/u/d79514dbf379/2017/03/29/HEXO-%E5%AE%89%E8%A3%85/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nico M">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nico酱的小站">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/03/29/HEXO-%E5%AE%89%E8%A3%85/" class="post-title-link" itemprop="url">HEXO 安装</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2017-03-29 17:40:58" itemprop="dateCreated datePublished" datetime="2017-03-29T17:40:58+08:00">2017-03-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-04-26 18:11:47" itemprop="dateModified" datetime="2020-04-26T18:11:47+08:00">2020-04-26</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>今天看到了一篇大神的博客,界面非常的简洁炫酷,顿时燃起了我的那颗折腾的心.</p>
-<p>原来是HEXO,搭配的主题真的十分好看,实战起来.</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2017/03/29/HEXO-%E5%AE%89%E8%A3%85/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2017/03/30/%E7%9C%8B%E6%BC%AB%E7%94%BB-%E5%AD%A6redux-%E8%BD%AC/" rel="prev" title="看漫画,学redux(转)">
+      <i class="fa fa-chevron-left"></i> 看漫画,学redux(转)
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -480,6 +352,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Hexo-和-nexT-主题的更新"><span class="nav-number">1.</span> <span class="nav-text">Hexo 和 nexT 主题的更新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新机制的改变"><span class="nav-number">2.</span> <span class="nav-text">更新机制的改变</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更多配置"><span class="nav-number">3.</span> <span class="nav-text">更多配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Issue"><span class="nav-number">4.</span> <span class="nav-text">Issue:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结语"><span class="nav-number">5.</span> <span class="nav-text">结语:</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
