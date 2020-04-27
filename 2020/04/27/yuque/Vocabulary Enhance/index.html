@@ -20,18 +20,18 @@
     var CONFIG = {"hostname":"nico-m.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Less as a pre-compile processor, is often used in our project.Mostly only small part is been taken advance of by us. Therefor I decide to have a deep exploit over it.  Css utils is very common either">
+  <meta name="description" content="{“format”:”lakesheet”,”type”:”Sheet”,”version”:”1.0”,”larkJson”:true,”sheet”:”x[mOÛÈ\u0016þ+Qú+å8ïôÓn»î««Û«ªr\u0001¬:¬íÐÒU%w\u0002\u0014X ´@\n´Òn\u000bt\u000bÝB²ÍÉØÎ¿Ø±p)qgH&lt;3&gt;Ï&amp;l">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Generate Css Utils by Less">
-<meta property="og:url" content="http://nico-m.github.io/2020/04/27/yuque/Generate%20Css%20Utils%20by%20Less/index.html">
+<meta property="og:title" content="Vocabulary Enhance">
+<meta property="og:url" content="http://nico-m.github.io/2020/04/27/yuque/Vocabulary%20Enhance/index.html">
 <meta property="og:site_name" content="Nico酱的小站">
-<meta property="og:description" content="Less as a pre-compile processor, is often used in our project.Mostly only small part is been taken advance of by us. Therefor I decide to have a deep exploit over it.  Css utils is very common either">
-<meta property="article:published_time" content="2020-04-27T01:18:02.000Z">
-<meta property="article:modified_time" content="2020-04-27T09:11:02.476Z">
+<meta property="og:description" content="{“format”:”lakesheet”,”type”:”Sheet”,”version”:”1.0”,”larkJson”:true,”sheet”:”x[mOÛÈ\u0016þ+Qú+å8ïôÓn»î««Û«ªr\u0001¬:¬íÐÒU%w\u0002\u0014X ´@\n´Òn\u000bt\u000bÝB²ÍÉØÎ¿Ø±p)qgH&lt;3&gt;Ï&amp;l">
+<meta property="article:published_time" content="2020-04-27T08:12:19.000Z">
+<meta property="article:modified_time" content="2020-04-27T09:11:02.400Z">
 <meta property="article:author" content="Nico M">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://nico-m.github.io/2020/04/27/yuque/Generate%20Css%20Utils%20by%20Less/">
+<link rel="canonical" href="http://nico-m.github.io/2020/04/27/yuque/Vocabulary%20Enhance/">
 
 
 <script id="page-configurations">
@@ -44,7 +44,7 @@
   };
 </script>
 
-  <title>Generate Css Utils by Less | Nico酱的小站</title>
+  <title>Vocabulary Enhance | Nico酱的小站</title>
   
 
 
@@ -151,7 +151,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://nico-m.github.io/2020/04/27/yuque/Generate%20Css%20Utils%20by%20Less/">
+    <link itemprop="mainEntityOfPage" href="http://nico-m.github.io/2020/04/27/yuque/Vocabulary%20Enhance/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -164,7 +164,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Generate Css Utils by Less
+          Vocabulary Enhance
         </h1>
 
         <div class="post-meta">
@@ -175,7 +175,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-04-27 09:18:02 / Modified: 17:11:02" itemprop="dateCreated datePublished" datetime="2020-04-27T09:18:02+08:00">2020-04-27</time>
+              <time title="Created: 2020-04-27 16:12:19 / Modified: 17:11:02" itemprop="dateCreated datePublished" datetime="2020-04-27T16:12:19+08:00">2020-04-27</time>
             </span>
 
           
@@ -189,27 +189,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <blockquote>
-<p>Less as a pre-compile processor, is often used in our project.Mostly only small part is been taken advance of by us. Therefor I decide to have a deep exploit over it.</p>
-</blockquote>
-<p>Css utils is very common either when you are in your project or you are building a library. A majority of us must tried boot-css before. There are a lot of utilized css class-name. For instance: <code>text-center,font-sm</code> .</p>
-<a id="more"></a> 
-
-<p>Recently I was coping with a project which has same demand.I have a <code>common.css</code> where put all the css utils in.All of the style is code by manually. I wish we can be more efficient. Then less is back to my eyes again.</p>
-<p>Usually we use the nesting feature,that’s really useful for us and saved a lot time for us of looking up the parent.</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.content</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">  <span class="selector-class">.list</span> &#123;</span><br><span class="line">    <span class="attribute">border-color</span>: blue;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>That’s pretty easy and easy to master. when it refers to some advanced feature,it get a little tricky.<br>For me , I prefer use another two feature: variable and namespace.</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@ns:</span> ex-css;</span><br><span class="line"><span class="selector-class">.@&#123;ns&#125;</span><span class="selector-tag">-name</span>&#123;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="selector-tag">&amp;</span><span class="selector-tag">-title</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1.8rem</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>whereas for create utils , these features are not enough. But Less offered us rich functions that can fulfill any requirements of us.</p>
-<p>variable variable: I like this feature, it make every variable are flexible, you can define any variable and make up to new variable.</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@primary:</span> green;</span><br><span class="line"><span class="variable">@secondary:</span> blue;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.section</span> &#123;</span><br><span class="line">  <span class="variable">@color:</span> primary;</span><br><span class="line"></span><br><span class="line">  <span class="selector-class">.element</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="variable">@@color</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>so now, I will take full use of it for generate my css utils.</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@position:</span>top,right,bottom,left;</span><br><span class="line"><span class="variable">@size:</span> xs,sm,md,lg;</span><br><span class="line"><span class="variable">@margin-left:</span>ml;<span class="variable">@margin-right:</span>mr;<span class="variable">@margin-top:</span>mt;<span class="variable">@margin-bottom:</span>mb;</span><br><span class="line"><span class="variable">@sm:</span> <span class="number">1em</span>; <span class="variable">@xs:</span> .<span class="number">5em</span>;<span class="variable">@md:</span><span class="number">1.5em</span>;<span class="variable">@lg:</span><span class="number">2em</span>;</span><br><span class="line"><span class="selector-class">.gen</span>(<span class="variable">@OldValue</span>)&#123;</span><br><span class="line">  <span class="selector-tag">each</span>(<span class="variable">@size</span>,&#123;</span><br><span class="line">    <span class="variable">@mg:</span> e(<span class="string">"margin-@&#123;OldValue&#125;"</span>);<span class="comment">// mg = margin-left</span></span><br><span class="line">    <span class="variable">@mgDir:</span> <span class="variable">@@mg</span>; <span class="comment">// variable variables</span></span><br><span class="line">    <span class="variable">@mg-class:</span> e(<span class="string">"@&#123;mgDir&#125;-@&#123;value&#125;"</span>);<span class="comment">//mg-class=ml-sm  e: transform 'ml-sm' to ml-sm</span></span><br><span class="line">    <span class="variable">@pd:</span> <span class="string">"padding-@&#123;OldValue&#125;"</span>; <span class="comment">// you have to use string to collocate variable</span></span><br><span class="line">    <span class="variable">@pd-class:</span> <span class="string">"@&#123;pd&#125;-@&#123;value&#125;"</span>;</span><br><span class="line">    <span class="selector-class">.@&#123;mg-class&#125;</span> &#123;</span><br><span class="line">      <span class="attribute">@&#123;mg&#125;</span>: <span class="variable">@@value</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">each</span>(<span class="variable">@position</span>,&#123;</span><br><span class="line">  <span class="selector-class">.gen</span>(<span class="variable">@value</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>Here is a note for me, I wish I can use it more smoothly at next time.</p>
+        <p>{“format”:”lakesheet”,”type”:”Sheet”,”version”:”1.0”,”larkJson”:true,”sheet”:”x[mOÛÈ\u0016þ+Qú+å8ïôÓn»î««Û«ªr\u0001¬:¬íÐÒU%w\u0002\u0014X ´@\n´Òn\u000bt\u000bÝB²ÍÉØÎ¿Ø±p)qgH&lt;3&gt;Ï&lt;gÎsæ©úó¯qS-¡xüö\u0010B\u000eÄûâ\u0016¾\u0003WL’Þ¯$\u0012}q\u001b\u0019HstlÚñþ_ñ<del>èkØ÷§/\u000fN¦Ão»è\u0010Î\u001aFÿëNè|º\u0011N{\u0014Î\u000bÖ{\u0014Î©:+Á/[HÃp¹íàÒíÞ\u0017èè\u0001ÝpÕ©Eô Þ¸ü^%Ó\u0017/!k\u0010Ý@Ñ}^¤ðîÓÿ¡àª£\u0006oI\ü²Ã\u0015é\u0010²°æ\u001f-Äé\fè&gt;Îötµu6\u001b&lt;Px3¼\u0019)Þ4{Fïí½Ø¾¸s1ûG¬\u001bÈ*\u001bªìËq&amp;/\u000frwþrkÍËÑ</del>µ­©\u0003\u0003Ø(êæàåÀ¿ZÂØpgçÜç.#øj²:\u0007\u0006.ãø:ÕOÞf5D£pÑüwH·ºa0x/{õ­öï+í\u000f\r.\u001eô l<code>Ý9C(Ëel9\u0015SwF¸ØÈÌ\u001boõÀo&gt;k}~ën·\u001a\u001b\\&amp;\u000eò\u000fr4OCI.HÝ¤ùª¡²ÃçknßyËÅ÷ïA\n\u0007qáxcgÞô8\u0017ªiôüZ½aâ Õöèv#ÅÅË½½¸\u0004\&quot;\fkÛ­sÃ·¦ud:\\\u0004îãWdqÝ\u001fäø¥¢?ä³p:×~;\u001fFæFo;*Í2\u0003²tDª\u0007ü\u001c£\u0011D¤?¶ë½:à?\f¬uç3!ÐÝ&#39;çû!Ì\u0015\bÁc\r\u0003zn¡®\u001a,\u0002&gt;N£)nìÁ ç]Ç|\u0002ªkþéW K3\\\u0010Áë# Ãç­¿WB\bY\u0006\u0004Õ [ r2ÌLµ&#39;\u0017¸\u00004|_µüÍ\u001f\&quot;Çíw\rnè\u0006\u001a¦&#39;</code>\u0010ñ¤1t\nÃu·¶ãÖ¦B$9\u0006&quot;*ê\u0014\t*2´&gt;¯Ð\u0015¼\t.¢¥\u001b\u0006\u0017Jû÷úu·±Ú:Ûéó\u000fß{uþ±\u001eP5ÝÐ\u001dÕáj5Çýæf#ÏÀ1Ì&quot;¶X ¾lóU²6un«»\õOÞpáàc<code>|_k?¬¹[\\\u0014\u0016*\u001báfòÙ[ 3:ª</code> p,ÚU0Pø+ïÈÜx\u001f&lt;q×Ï¹ñëf¶\rüÜ&quot;¯È\u000b&gt;\u000b¥¶ªEDë|Ï}Ú9\u0018pUØÃìF£R\u0018aÖY·Zu\u0017w#\u0000h\u0016RmT\u0015QIBòây{­IS³½5ê<del>\u0018ãë:­×¨Ø-×Ã2Óú2×\u0001tUÛ»Õj8(\u0016Ì£ÞjìxõíëîøQ¸\u0006÷Ä6²U§Ë-\u001bÑá»þº{ØxXJz¥\u0014qBjígoü³\u000e«\u001aÞ©z\u00166Rw?¾)¼\u0007djþ{Éw\u001a&gt;wn\u001e\u0013.J+vlHÕî!/&quot;õerø¢\u0003åªg5(\u0006S@Fë´v·&gt;W¹P\u001c\u001cUµF7üÝyº×Ý÷õÖù®»vÌW\u0007\u001aêN&amp;\u0006ÿÓ¤ßî<code>¸*æ1H¥À@öÕî7±¾ã\u001fòÏºlT*\u0018&gt;\rdò¯V/#%\\¬\u0018*\u0000÷</code>ÔÖÉü0’øXb^Ò\u001d}fö7moØÌ5Vü×/ù§½T6P)ª¢2L¹àBÐp©MºÀ¿°\u0015ôdaÝ\bÚr)êÈ·k/È\u0012mÅ’Zõn-fi|\u0010Î\u0017ù¥?ÜE¾0ê6Ý\u0013¬õy,ñÙH-õòÍÎú×¨]PÃö°Å1jr:\u0017Õã&quot;SSËvÅèµ\u0005ljó*ò{Ü²Kº\u0019Å[;&amp;Óç\u0017\bX¢\u000bF\Øb©\tiN¶QÝIIµî!’FÁðQ|\u001e#£ü3bâa]ó\u001ay¿\u001f¶úA\f,E\u000fïK%ÚduÛoZ¬÷Þùë(\u0010t#\u0007hÅ:%Þ_hÑâßì`\u000b&lt;(UdVLwvÔo\u001ewÐ°Ô=(º\u0016íÝ\u0019HÚÓ\u000bdê\u0019\u0017Æ 2¥kü¦ýã&amp;y&gt;\u0017qÒkcW?ÙµöpÏÛ</del>ÕK’%åt+Û\u0003çÞw´\u001a¥á´Kîµ§ìDúH\u000e7ZçS\\b4\u0013T-¢\u000f9w×N.âg©·cULGôÆí&gt;yÏ\u001e\u0005}%ÿ0»’<em>¼ÕmnèÅ\u0011þ¾»ÛnPaô:bj¬L\u0000K\u001eÆÿ ËüÌ\u001f¢\u0019ëDäL{û£»3\u001dÑ\u000fT¬n\u000fE¤½×¬»Oº\tÏRè@a\u0010m¤\u0019He7çÇã­\u0006\u001fnÒ-(ª\u000f#gq,ó3’ì\u001f£ZØ¥ùP\u0000X\u001a\u001dÔâo\f»Å%oßb\u0014\f\u001c)\u0001þô¸?ÖjY)ô üÙ1\u001cá­í¹\u000bèY:¬\u0014\u0010ëb×qÓ¢JgGÁ#ZÖöÆ\u0012i,F\u0001(à\u0011\r;\u0011&quot;V=í]è\u0014\u0006\u0007^ívÐ\u001cq7T¾I\u0016vÛ»Í¾ÖÙ\u001cYzÌÞ\u0004et[3vÑ&lt;hòCÏÑEéa)qa$fâX\tÑ\u000b&quot;zö3|\u001d®8jÁà§?½PÅ§Q4\u0004+D^Ké|Ò\u0018ëx,\u0019¦ÍÃ69¼­ß¼µW\u0011ò«\u000fë\u0006\u001ap,gÏºÍ\u0014ïð\u000e<code>kóÞí&gt;U°&lt;KríJÁF¿TØW¶öÆ\&quot;ÍïK»±îÎók¨íXª&gt;8äP\b=×½ÿµ}ÿh£BIúÚeÌ@k÷ø\u001b?\r òÖ\\}Kª|G¶+ÉÈÉdïBs,Í¥wÿ\n³qkl-~éÄ\u0015ÇÆ\u0015KúW\t²÷ÌGtÐô°ÑUøÁ!ÇAñ¢\u0017To³S@,\u0011.êô²h³Û\u001eo¿Þ~ñß8Ð)FÁð5àË\u0002mù\u0003\u0015O~ïà½;¸Ø|ú\u0016ÆÎ{zqðgÿÊ{m´ß2\u0011®ðsß~ëM|ª;\u0015\u0014\u0011íÃÎ\t½à^</code>øJ|SBK]zA</em>\u001c\u0015\u001f\u0013\u001f\u0017\u001eJ\u000f\u0005ñ¡øÐ¤øÐøÐ´øPq¶Râl¥ÄÙJ³\u0016g+-ÎVZ­´8[iq¶Òâl¥ÅÙJ³\u0016g+-ÎVF­8[\u0019q¶2âleÄÙÊ³\u0011g+#ÎVF­8[Yq¶²âleÅÙÊ³\u0015g++ÎVV­¬8[Yq¶²âlåÄÙÊ³\u0013g+’ÎVN­8[9q¶râlåÄÙÊ³\u0017g+/ÎV^­¼8[yq¶òâlåÅÙÊ³\u0017g+/Î\u0016$Äé8_\u0010’\f\u0012âAB2Hs\u0006\tqÒ !Î\u001a$Äi\u0004o Á\u001bHð\u0006\u0012¼\u0004o Á\u001bHð\u0006\u0012¼\u0004o Á\u001bHð¦Hð¦Hð¦Hð¦Hð¦Hð¦Hð¦Hð¦Hð¦Hð¦Hðà-)Á[R·¤\u0004oI\tÞ\u0012¼I\u0018\u001e áxå\u0001\u0012\u0007H\u001e ází\u0001\u0012¾\u0007H\u0018\u001f á|õ\u0001\u0012Þ\u0007H\u001f á<del>ý\u0001\u0012þ\u0007H\u0018 á\u0005\u0002\u0012\u001e\bH á\r\u0002\u0012&gt;\bH\u0018! á\u0015\u0002\u0012^\bH! á\u001d\u0002\u0012</del>\bH\u0018&quot; á%\u0002\u0012\bH&quot; á-\u0002\u0012¾\bH\u0018# á5\u0002\u0012Þ\bH# á=\u0002\u0012þ\bH\u0018$ áE\u0002\u0012\u001e\tH$ áM\u0002\u0012&gt;\tH\u0018% áU\u0002\u0012^\tH% á]\u0002Â~\tý4|ÛÁ\u0016\n¿rF\ft· j÷n<code>\u0003[ñþã×nýpóGzÓí_K+7RðCð×­[?Ýº\u0019ü¯Äk?¥neo*ñ;}Ý¹Úÿç¥\u0015E¹\u0019É\u0007?\u0017c§CÉ»Ä]-A\u001f\u0017à®\u0016,\u0015|¥\u0004á</code>¸3R\u000eG\u0010¿óèÑ\u0000&gt;?\u0018”,”calcChain”:[],”vessels”:{},”useUTC”:true,”useIndex”:true,”customColors”:[],”versionId”:”97uyQwAM8zt7M8x8”}</p>
 
     </div>
 
@@ -225,7 +205,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="http://nico-m.github.io/2020/04/27/yuque/Generate%20Css%20Utils%20by%20Less/" title="Generate Css Utils by Less">http://nico-m.github.io/2020/04/27/yuque/Generate Css Utils by Less/</a>
+    <a href="http://nico-m.github.io/2020/04/27/yuque/Vocabulary%20Enhance/" title="Vocabulary Enhance">http://nico-m.github.io/2020/04/27/yuque/Vocabulary Enhance/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -242,13 +222,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/04/26/yuque/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0Github/" rel="prev" title="自动化部署到Github">
-      <i class="fa fa-chevron-left"></i> 自动化部署到Github
+    <a href="/2020/04/27/yuque/Generate%20Css%20Utils%20by%20Less/" rel="prev" title="Generate Css Utils by Less">
+      <i class="fa fa-chevron-left"></i> Generate Css Utils by Less
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/04/27/yuque/Vocabulary%20Enhance/" rel="next" title="Vocabulary Enhance">
-      Vocabulary Enhance <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -423,7 +400,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'Nico-M.github.io',
       owner       : 'Nico-M',
       admin       : ['Nico-M'],
-      id          : '4f615a3cfe7c55299bccea5671a29a25',
+      id          : '7a4d407d736bbb33fc9c3cce67e6fbc1',
         language: '',
       distractionFreeMode: true
     });
