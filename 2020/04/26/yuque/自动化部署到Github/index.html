@@ -17,13 +17,13 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.jianshu.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"nico-m.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="前言: github page 还是三年前配置的,最近心血来潮,就想把他更新一下.没想到一下整出来很多新东西.  Hexo 和 nexT 主题的更新NexT  还是那么的漂亮和优雅,不再折腾样式了.当前更新了 hexo-cli ,然后又把NexT主题更到了最新版本.然后一执行命令就挂掉了,报的很奇葩的错: Unhandled rejection Template render error .后面">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自动化部署到Github">
-<meta property="og:url" content="http://www.jianshu.com/u/d79514dbf379/2020/04/26/yuque/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0Github/index.html">
+<meta property="og:url" content="http://nico-m.github.io/2020/04/26/yuque/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0Github/index.html">
 <meta property="og:site_name" content="Nico酱的小站">
 <meta property="og:description" content="前言: github page 还是三年前配置的,最近心血来潮,就想把他更新一下.没想到一下整出来很多新东西.  Hexo 和 nexT 主题的更新NexT  还是那么的漂亮和优雅,不再折腾样式了.当前更新了 hexo-cli ,然后又把NexT主题更到了最新版本.然后一执行命令就挂掉了,报的很奇葩的错: Unhandled rejection Template render error .后面">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1341953/1587890456265-f7726466-b243-491c-8931-59740767b332.png#align=left&display=inline&height=760&margin=%5Bobject%20Object%5D&name=WX20200426-163958%402x.png&originHeight=760&originWidth=1366&size=120126&status=done&style=none&width=1366">
@@ -37,12 +37,12 @@
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1341953/1587893564911-950f5b0a-d315-4a90-bbc5-f54d4509fd85.png#align=left&display=inline&height=448&margin=%5Bobject%20Object%5D&name=image.png&originHeight=938&originWidth=1508&size=175679&status=done&style=none&width=720">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2020/png/1341953/1587894862044-31fe80dd-45be-4d3c-92ef-cbb47bbd5849.png#align=left&display=inline&height=432&margin=%5Bobject%20Object%5D&name=image.png&originHeight=864&originWidth=2058&size=126708&status=done&style=none&width=1029">
 <meta property="article:published_time" content="2020-04-25T16:16:04.000Z">
-<meta property="article:modified_time" content="2020-04-27T02:24:54.635Z">
+<meta property="article:modified_time" content="2020-04-27T03:17:33.246Z">
 <meta property="article:author" content="Nico M">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2020/png/1341953/1587890456265-f7726466-b243-491c-8931-59740767b332.png#align=left&display=inline&height=760&margin=%5Bobject%20Object%5D&name=WX20200426-163958%402x.png&originHeight=760&originWidth=1366&size=120126&status=done&style=none&width=1366">
 
-<link rel="canonical" href="http://www.jianshu.com/u/d79514dbf379/2020/04/26/yuque/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0Github/">
+<link rel="canonical" href="http://nico-m.github.io/2020/04/26/yuque/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0Github/">
 
 
 <script id="page-configurations">
@@ -162,7 +162,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://www.jianshu.com/u/d79514dbf379/2020/04/26/yuque/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0Github/">
+    <link itemprop="mainEntityOfPage" href="http://nico-m.github.io/2020/04/26/yuque/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0Github/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -192,7 +192,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-04-27 10:24:54" itemprop="dateModified" datetime="2020-04-27T10:24:54+08:00">2020-04-27</time>
+                <time title="Modified: 2020-04-27 11:17:33" itemprop="dateModified" datetime="2020-04-27T11:17:33+08:00">2020-04-27</time>
               </span>
 
           
@@ -302,7 +302,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="http://www.jianshu.com/u/d79514dbf379/2020/04/26/yuque/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0Github/" title="自动化部署到Github">http://www.jianshu.com/u/d79514dbf379/2020/04/26/yuque/自动化部署到Github/</a>
+    <a href="http://nico-m.github.io/2020/04/26/yuque/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0Github/" title="自动化部署到Github">http://nico-m.github.io/2020/04/26/yuque/自动化部署到Github/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
