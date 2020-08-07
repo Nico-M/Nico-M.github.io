@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"nico-m.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Actrually they are some snippets in case of forgetting.   组件声明  1234567891011&#x2F;&#x2F;纯组件const eg1 &#x3D; (&amp;#123; msg &amp;#125;: &amp;#123; message: string &amp;#125;) &#x3D;&gt; &lt;div&gt;&amp;#123;msg&amp;#125;&lt;&#x2F;div&gt;;&#x2F;&#x2F;SFCcons">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React tips collection">
+<meta property="og:url" content="http://nico-m.github.io/2020/08/07/yuque/React%20tips%20collection/index.html">
+<meta property="og:site_name" content="Nico酱的小站">
+<meta property="og:description" content="Actrually they are some snippets in case of forgetting.   组件声明  1234567891011&#x2F;&#x2F;纯组件const eg1 &#x3D; (&amp;#123; msg &amp;#125;: &amp;#123; message: string &amp;#125;) &#x3D;&gt; &lt;div&gt;&amp;#123;msg&amp;#125;&lt;&#x2F;div&gt;;&#x2F;&#x2F;SFCcons">
+<meta property="article:published_time" content="2020-08-07T06:56:09.000Z">
+<meta property="article:modified_time" content="2020-08-07T07:50:58.816Z">
+<meta property="article:author" content="Nico M">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://nico-m.github.io/2020/08/07/yuque/React%20tips%20collection/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>React tips collection | Nico酱的小站</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <meta name="referrer" content="no-referrer" />
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Nico酱的小站</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">洒洒水</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://nico-m.github.io/2020/08/07/yuque/React%20tips%20collection/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nico M">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nico酱的小站">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          React tips collection
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-08-07 14:56:09 / Modified: 15:50:58" itemprop="dateCreated datePublished" datetime="2020-08-07T14:56:09+08:00">2020-08-07</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <blockquote>
+<p>Actrually they are some snippets in case of forgetting.</p>
+</blockquote>
+<ol>
+<li>组件声明</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//纯组件</span></span><br><span class="line"><span class="keyword">const</span> eg1 = <span class="function">(<span class="params">&#123; msg &#125;: &#123; message: <span class="built_in">string</span> &#125;</span>) =&gt;</span> &lt;div&gt;&#123;msg&#125;&lt;<span class="regexp">/div&gt;;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/SFC</span></span><br><span class="line"><span class="regexp">const eg2: React.SFC&lt;Msg&gt; = (&#123; message, children &#125;) =&gt; &lt;div&gt;&#123;children&#125;&#125;&lt;/</span>div&gt;;</span><br><span class="line"><span class="comment">//class</span></span><br><span class="line"><span class="keyword">class</span> Eg <span class="keyword">extends</span> React.Component&lt;PropsType, StateType&gt; &#123;</span><br><span class="line">  <span class="comment">// const &#123;message = 'default'&#125; = this.props;  for function component</span></span><br><span class="line">  <span class="keyword">static</span> defaultProps: Partial&lt;PropsType&gt; = &#123;</span><br><span class="line">    key: value,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<ol start="2">
+<li>函数组件的默认属性</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Props = &#123; age: <span class="built_in">number</span> &#125; &amp; <span class="keyword">typeof</span> defaultProps;</span><br><span class="line"><span class="keyword">const</span> defaultProps = &#123;</span><br><span class="line">  who: <span class="string">"Johny Five"</span>,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> Greet = <span class="function">(<span class="params">props: Props</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">/*...*/</span></span><br><span class="line">&#125;;</span><br><span class="line">Greet.defaultProps = defaultProps;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>class 组件</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> State = <span class="keyword">typeof</span> initialState;</span><br><span class="line"><span class="keyword">type</span> Props = &#123; someProps: <span class="built_in">string</span> &#125; &amp; <span class="keyword">typeof</span> defaultProps;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> initialState = &#123; count: <span class="number">0</span> &#125;;</span><br><span class="line"><span class="keyword">const</span> defaultProps = &#123; who: <span class="string">"Nico"</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> Greet <span class="keyword">extends</span> React.Component&lt;GreetProps&gt; &#123;</span><br><span class="line">  <span class="keyword">static</span> defaultProps = defaultProps;</span><br><span class="line">  <span class="comment">/*...*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>ref 的 typescript 写法</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> CssThemeProvider <span class="keyword">extends</span> React.PureComponent&lt;Props&gt; &#123;</span><br><span class="line">  <span class="keyword">private</span> rootRef: React.RefObject&lt;HTMLDivElement&gt; = React.createRef();</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> &lt;div ref=&#123;<span class="keyword">this</span>.rootRef&#125;&gt;&#123;<span class="keyword">this</span>.props.children&#125;&lt;<span class="regexp">/div&gt;;</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><code>create-react-app my-project --use-npm</code>    选定使用 npm.</li>
+<li>联合类型声明,对于原始类型,ts 可以自动识别</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> Bird &#123;</span><br><span class="line">  fly();</span><br><span class="line">  layEggs();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> Fish &#123;</span><br><span class="line">  swim();</span><br><span class="line">  layEggs();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSmallPet</span>(<span class="params"></span>): <span class="title">Fish</span> | <span class="title">Bird</span> </span>&#123;</span><br><span class="line">  <span class="comment">// ...断言</span></span><br><span class="line">  <span class="keyword">if</span> ((&lt;Fish&gt;pet).swim) &#123;</span><br><span class="line">    (&lt;Fish&gt;pet).swim();</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    (&lt;Bird&gt;pet).fly();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//自定义</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isFish</span>(<span class="params">pet: Fish | Bird</span>): <span class="title">pet</span> <span class="title">is</span> <span class="title">Fish</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (&lt;Fish&gt;pet).swim !== <span class="literal">undefined</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (isFish(pet)) &#123;</span><br><span class="line">  pet.swim();</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  pet.fly();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>使用 <code>tabIndex</code>  可以控制 TAB 光标选中</li>
+<li>默认设置组件不加载</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> MessageBox = <span class="function">(<span class="params">&#123; open, text, buttons &#125;</span>) =&gt;</span></span><br><span class="line">  open ? (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &#123;text&#125;</span><br><span class="line">      &#123;buttons(Button)&#125;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  ) : null;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="9">
+<li>高阶组件的 ts 写法:</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">wrapPicker</span>&lt;<span class="title">T</span>&gt;(<span class="params">Component: React.ComponentType&lt;T&gt;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">class</span> <span class="keyword">extends</span> React.Component &#123;</span><br><span class="line">    componentWillReceiveProps(</span><br><span class="line">      nextProps: React.ComponentProps&lt;<span class="keyword">typeof</span> Component&gt;</span><br><span class="line">    ) &#123;&#125;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">      <span class="keyword">const</span> props = <span class="keyword">this</span>.props;</span><br><span class="line">      <span class="keyword">return</span> &lt;Component &#123;...(props <span class="keyword">as</span> T)&#125; /&gt;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> wrapPicker;</span><br></pre></td></tr></table></figure>
+
+<ol start="10">
+<li>对于有底部 border 的 input 在 hover 时 border 的 width 变化,行高可能会出现变化,解决: _ 在其父级加入 after 伪类做 border-bottom,不要用 input 的 border,另外 input 加伪类不生效. _</li>
+<li>less 有关</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">width</span>: ~calc(<span class="number">100px</span> - <span class="number">20px</span>) <span class="comment">// ~意思是避免编译</span></span><br><span class="line"><span class="variable">@selectors</span>: primary, secondary, tertiary,black,gray;</span><br><span class="line">	<span class="selector-tag">each</span>(<span class="variable">@selectors</span>,&#123;</span><br><span class="line">	  <span class="selector-class">.@&#123;value&#125;</span><span class="selector-tag">-color</span>&#123;</span><br><span class="line">	    <span class="variable">@cur-color:</span> <span class="string">'@&#123;value&#125;-color'</span>;</span><br><span class="line">	    <span class="attribute">color</span>: <span class="variable">@@cur-color</span>;</span><br><span class="line">	  &#125;</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
+
+<ol start="12">
+<li>窗口的滚动</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">滚动的高度 = <span class="built_in">document</span>.documentElement.scrollTop || <span class="built_in">window</span>.pageYOffset || <span class="built_in">document</span>.body.scrollTop</span><br><span class="line">	<span class="comment">//兼容性的话,可以使用document.scrollingElement.scrollTop</span></span><br><span class="line"></span><br><span class="line">	窗口的高度 = <span class="built_in">window</span>.innerHeight || <span class="built_in">document</span>.documentElement.clientHeight;</span><br><span class="line">	<span class="comment">//普通元素的高度获取:clientHeight 是不包含border-box, offsetHeight包含边框</span></span><br><span class="line">	scrollHeight,getBoundingClientRect().height</span><br><span class="line"></span><br><span class="line">	<span class="built_in">document</span>.documentElement.offsetHeight居然是包含浏览器滚动高度的完整高度，</span><br><span class="line"></span><br><span class="line">	feature: <span class="comment">// 平滑滚动: html, body &#123; scroll-behavior:smooth; &#125;</span></span><br><span class="line"></span><br><span class="line">	手动平滑 记住一个formula: A = A + (B-A)/(RATE||<span class="number">2</span>)</span><br><span class="line">		<span class="built_in">Math</span>.easeout = <span class="function"><span class="keyword">function</span> (<span class="params">A, B, rate, callback</span>) </span>&#123;</span><br><span class="line">	    <span class="keyword">if</span> (A == B || <span class="keyword">typeof</span> A != <span class="string">'number'</span>) &#123;</span><br><span class="line">	        <span class="keyword">return</span>;</span><br><span class="line">	    &#125;</span><br><span class="line">	    B = B || <span class="number">0</span>;</span><br><span class="line">	    rate = rate || <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">	    <span class="keyword">var</span> step = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	        A = A + (B - A) / rate;</span><br><span class="line"></span><br><span class="line">	        <span class="keyword">if</span> (A &lt; <span class="number">1</span>) &#123;</span><br><span class="line">	            callback(B, <span class="literal">true</span>);</span><br><span class="line">	            <span class="keyword">return</span>;</span><br><span class="line">	        &#125;</span><br><span class="line">	        callback(A, <span class="literal">false</span>);</span><br><span class="line">	        requestAnimationFrame(step);</span><br><span class="line">	    &#125;;</span><br><span class="line">	    step();</span><br><span class="line">		&#125;;</span><br></pre></td></tr></table></figure>
+
+<ol start="13">
+<li>防抖</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Throttle</span>(<span class="params">fn, delay</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> last = <span class="number">0</span>,</span><br><span class="line">    timer = <span class="literal">null</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> context = <span class="keyword">this</span>,</span><br><span class="line">      args = <span class="built_in">arguments</span>,</span><br><span class="line">      now = +<span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">    <span class="keyword">if</span> (now - last &lt; delay) &#123;</span><br><span class="line">      clearTimeout(timer);</span><br><span class="line">      timer = setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        last = now;</span><br><span class="line">        fn.apply(context, args);</span><br><span class="line">      &#125;, delay);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      last = now;</span><br><span class="line">      fn.apply(context, args);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="14">
+<li>直接获取表单 dom: <code>document.forms[&#39;loginForm&#39;]</code></li>
+<li>获取类似 get 的格式化语句</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.entries(object1)</span><br><span class="line">  .map(<span class="function">(<span class="params">kv</span>) =&gt;</span> <span class="string">`<span class="subst">$&#123;kv[<span class="number">0</span>]&#125;</span>=<span class="subst">$&#123;<span class="built_in">encodeURIComponent</span>(kv[<span class="number">1</span>])&#125;</span>`</span>)</span><br><span class="line">  .join(<span class="string">"&amp;"</span>);</span><br><span class="line"><span class="comment">//解析</span></span><br><span class="line"><span class="keyword">var</span> urlSearchParams = <span class="keyword">new</span> URLSearchParams(urlString);</span><br><span class="line"><span class="keyword">var</span> urlObj = &#123;&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> [key, value] <span class="keyword">of</span> urlSearchParams.entries()) &#123;</span><br><span class="line">  urlObj[key] = value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="16">
+<li>React-transition-group 使用方法,css-transition 第一次调用,使用的类是 appear,后面几次才会使用 enter</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//首先,transition是基础,他可以吐出四个不同的状态'entering'|entered|exiting|exited</span></span><br><span class="line"><span class="comment">//unmountOnExit 这个属性可以控制dom节点要不要unmount,就是document上需不需要</span></span><br><span class="line"><span class="comment">// cssTransition 是通过样式控制在不同的状态显示的样式动画,所以classnames是一个需要定义的属性,其和css是相关联的</span></span><br><span class="line"><span class="comment">//着重说一下怎么样和animation.css结合</span></span><br><span class="line">&lt;cssTransition</span><br><span class="line">  <span class="keyword">in</span>=&#123;state&#125;</span><br><span class="line">  classNames=&#123;&#123;</span><br><span class="line">    enter: <span class="string">"animated"</span>,</span><br><span class="line">    enterActive: <span class="string">"rubberBand"</span>,</span><br><span class="line">    exit: <span class="string">"animated"</span>,</span><br><span class="line">    exitActive: <span class="string">"slideOutRight"</span>,</span><br><span class="line">  &#125;&#125;</span><br><span class="line">&gt;</span><br><span class="line">  &lt;div&gt;...&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>cssTransition&gt;</span><br></pre></td></tr></table></figure>
+
+<ol start="17">
+<li>命名方式: <code>camelCase, PascalCase, kebab-case</code></li>
+<li>深层过滤器</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> res = input.filter(<span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">o</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (o.value.includes(<span class="string">"Hit"</span>)) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (o.children) &#123;</span><br><span class="line">    <span class="keyword">return</span> (o.children = o.children.filter(f)).length;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ol start="19">
+<li><p>几种类型的操作</p>
+</li>
+<li><p>Exclude 排除<br><code>Exclude&lt;keyof Props, keyof ExtractName&gt;</code> extractName 为想要排除掉的 props</p>
+</li>
+<li><p>Pick为只选用其中的一些属性<br><code>Pick&lt;User,&quot;name&quot;|&quot;age&quot;&gt;</code> 只选用 name 和 age 这两个属性</p>
+</li>
+</ol>
+<p>20) 复制文本并选中 <code>textarea$.select(); document.execCommand(&#39;copy&#39;);</code><br>21) `bind,call,apply</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">var</span> car = &#123;</span><br><span class="line">      registrationNumber: <span class="string">"GA12345"</span>,</span><br><span class="line">      brand: <span class="string">"Toyota"</span>,</span><br><span class="line">      displayDetails: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">              <span class="built_in">console</span>.log(<span class="keyword">this</span>.registrationNumber + <span class="string">" "</span> + <span class="keyword">this</span>.brand);</span><br><span class="line">          &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1. bind 将会创建一个重新绑定this的函数</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">const</span> myCarDetail = car.displayDetails; <span class="comment">//这样的myCarDetail在调用时内部的this指向window</span></span><br><span class="line">	<span class="keyword">const</span> myCarDetailWithBind = car.displayDetails.bind(car); <span class="comment">//重新指定了this为car</span></span><br><span class="line">	<span class="keyword">const</span> myCarDetailBindParam = car.displayDetails.bind(car,args); <span class="comment">//需要传参的情况</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. call and apply</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> car = &#123;</span><br><span class="line">	    registrationNumber: <span class="string">"GA12345"</span>,</span><br><span class="line">	    brand: <span class="string">"Toyota"</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">displayDetails</span>(<span class="params">ownerName</span>) </span>&#123;</span><br><span class="line">	    <span class="built_in">console</span>.log(ownerName + <span class="string">", this is your car: "</span> + <span class="keyword">this</span>.registrationNumber + <span class="string">" "</span> + <span class="keyword">this</span>.brand);</span><br><span class="line">	&#125;</span><br><span class="line">	displayDetails.call(car,<span class="string">'nico'</span>)</span><br><span class="line">	displayDetails.apply(car,[<span class="string">'nico'</span>])</span><br><span class="line">	<span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">bind主要用于以一个指定的值做为一个函数的value.并没有执行,还可以借用和复用一个方法,</span></span><br><span class="line"><span class="string">  或者给一个方法赋给一个变量</span></span><br><span class="line"><span class="string">call,apply 第一个参数用于设置this, 后面的值作为参数传入函数,也可以借用函数,</span></span><br><span class="line"><span class="string">  方式更多样化.(类数组可以借用Array.prototype的方法,还有函数的参数arguments)</span></span><br></pre></td></tr></table></figure>
+
+<ol start="22">
+<li>一些 ts 的片段</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// variables</span></span><br><span class="line"><span class="keyword">const</span> variableName: varType;</span><br><span class="line"><span class="keyword">const</span> name: <span class="built_in">string</span>;</span><br><span class="line"><span class="keyword">const</span> disabled: <span class="built_in">boolean</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// functions (and function variables)</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">funcName</span>(<span class="params">arg1: argType, arg2: argType</span>): <span class="title">returnType</span> </span>&#123;&#125;</span><br><span class="line"><span class="keyword">const</span> funcName: <span class="function">(<span class="params">arg1: argType</span>) =&gt;</span> returnType;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">split</span>(<span class="params">str: <span class="built_in">string</span>, delim: <span class="built_in">string</span></span>): <span class="title">string</span>[] </span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">map</span>&lt;<span class="title">T</span>, <span class="title">U</span>&gt;(<span class="params">array: T[], iterator: (item: T, index: <span class="built_in">number</span>) =&gt; U</span>): <span class="title">U</span>[]</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// interfaces describe plain objects</span></span><br><span class="line"><span class="comment">// (we use the convention that interfaces begin with "I")</span></span><br><span class="line"><span class="keyword">interface</span> IOption &#123;</span><br><span class="line">  label: <span class="built_in">string</span>;</span><br><span class="line">  value: <span class="built_in">string</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> option: IOption = &#123; label: <span class="string">"Name"</span>, value: <span class="string">"Gilad"</span> &#125;;</span><br></pre></td></tr></table></figure>
+
+<ol start="23">
+<li>函数的安全调用</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">safeInvoke</span>(<span class="params">func: <span class="built_in">Function</span> | <span class="literal">undefined</span>, ...args: <span class="built_in">any</span>[]</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (isFunction(func)) &#123;</span><br><span class="line">    <span class="keyword">return</span> func(...args);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">undefined</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="24">
+<li>export 的一些用法</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// some var</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> someVar = <span class="number">123</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// some function</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">someFunction</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// some class</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">class</span> someClass &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123; module1, module2, module3 &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> all <span class="keyword">from</span> <span class="string">"./test"</span>;</span><br></pre></td></tr></table></figure>
+
+<ol start="25">
+<li><p>一款工具可以监听文件变化,并重启服务器: <code>nodemon</code></p>
+</li>
+<li><p>对象转化为字面量类型: <code>keyof typeof Type</code></p>
+</li>
+<li><p>webpack 使用小结</p>
+</li>
+<li><p>配置 config</p>
+</li>
+<li><p>tsconfig. 这里遇到 moment 无法识别: 添加配置:<br><code>&quot;moduleResolution&quot;: &quot;node&quot;,</code><br><code>&quot;allowSyntheticDefaultImports&quot;: true,</code></p>
+</li>
+<li><p>如果要导出声明文件需配置<br><code>//tsconfig &quot;declaration&quot;: true</code><br><code>//package.json tsc --emitDeclarationOnly</code></p>
+</li>
+<li><p>对于打包的声明文件有两种形式,一个是单独发一个包名<code>@types/package_name</code>,里面只有声明文件.另一种形式就是与包一起发,index.js 并列一个 index.d.ts.</p>
+</li>
+<li><p>key 在渲染时如果每次都跟着变,就会重复渲染,会有性能问题,注意既要保持 key 唯一,也要保证其不会一直刷新</p>
+</li>
+<li><p>ts 当中 key in 和 key of</p>
+</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> key = <span class="string">"vue"</span> | <span class="string">"react"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> MappedType = &#123; [k <span class="keyword">in</span> key]: <span class="built_in">string</span> &#125;; <span class="comment">// &#123; vue: string; react: string; &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> Student &#123;</span><br><span class="line">  name: <span class="built_in">string</span>;</span><br><span class="line">  age: <span class="built_in">number</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> studentKey = keyof Student; <span class="comment">// "name" | "age"</span></span><br></pre></td></tr></table></figure>
+
+<ol start="30">
+<li>如何使用 git reset: <code>https://www.codenong.com/cs105557977/</code></li>
+<li>get all export var from current folder, <code>import * as _adapter from &quot;./data&quot;</code> ;</li>
+<li>process.argv 返回一个数组，这个数组包含了启动 Node.js 进程时的命令行参数。</li>
+<li><code>Array.from({ length: 2 }, () =&gt; &#39;jack&#39;)</code> 生成数组   或者 <code>new Array(9).fill(&#39;item&#39;)</code></li>
+<li><code>.show-grid [class*=&quot;span&quot;]</code>  类似于正则匹配</li>
+<li>只要一个匹配成功,后面就不管了,可以这样用:</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> diffed = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">const</span> activated = matched.filter(<span class="function">(<span class="params">c, i</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> diffed || (diffed = prevMatched[i] !== c);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ol start="36">
+<li>导入后紧接着又导出去</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">"./App"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br><span class="line"></span><br><span class="line"><span class="comment">//可以一句话</span></span><br><span class="line"><span class="keyword">export</span> &#123; <span class="keyword">default</span> <span class="keyword">as</span> App &#125; <span class="keyword">from</span> <span class="string">"./App.js"</span>;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Nico M
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="http://nico-m.github.io/2020/08/07/yuque/React%20tips%20collection/" title="React tips collection">http://nico-m.github.io/2020/08/07/yuque/React tips collection/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/27/yuque/Vocabulary%20Enhance/" rel="prev" title="Vocabulary Enhance">
+      <i class="fa fa-chevron-left"></i> Vocabulary Enhance
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/08/07/yuque/Hooks%20%E8%A7%A3%E8%AF%BB/" rel="next" title="Hooks 解读">
+      Hooks 解读 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Nico M</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Nico M</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '0bbfd9ba02f73920022f',
+      clientSecret: '49f720e53279952a52318579fbd45885d4270a84',
+      repo        : 'Nico-M.github.io',
+      owner       : 'Nico-M',
+      admin       : ['Nico-M'],
+      id          : '57712e3ae2a3f4a24239acd34e85757b',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>
