@@ -1,0 +1,42 @@
+# This is a basic workflow that is manually triggered
+name: Deploy To Github Pages
+
+on: [push, repository_dispatch]
+
+jobs:
+  deploy:
+    name: Deploy Hexo Public To Pages
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
+
+    steps:
+      - name: Checkout Repository master branch
+        uses: actions/checkout@master
+
+      - name: Setup Node.js 14.x
+        uses: actions/setup-node@master
+        with:
+          node-version: "14.x"
+      # 这里有使用到羽雀的key,就是刚在setting中设置的值,如果你设置的变量名不同,请更改
+      - name: Setup Hexo Dependencies and Hexo Sync Files
+        env:
+          YUQUE_TOKEN: ${{ secrets.YUQUE_TOKEN }}
+        run: |
+          npm install
+          npm run sync
+
+      - name: Generate Public Files
+        run: npm run start
+
+      # from https://github.com/peaceiris/actions-gh-pages
+      # 这里也有使用的deploy key,可以参考这个action的文档,两种key都可以
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY }}
+          external_repository: Nico-M/Nico-M.github.io #xx-xx/xx-xx.github.io
+          publish_branch: master
+          publish_dir: ./public
+          commit_message: ${{ github.event.head_commit.message }},
+          keep_files: true
