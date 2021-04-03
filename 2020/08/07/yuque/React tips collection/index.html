@@ -20,14 +20,14 @@
     var CONFIG = {"hostname":"nico-m.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Actrually they are some snippets in case of forgetting.   组件声明  1234567891011&#x2F;&#x2F;纯组件const eg1 &#x3D; (&amp;#123; msg &amp;#125;: &amp;#123; message: string &amp;#125;) &#x3D;&gt; &lt;div&gt;&amp;#123;msg&amp;#125;&lt;&#x2F;div&gt;;&#x2F;&#x2F;SFCcons">
+  <meta name="description" content="Actrually they are some snippets in case of forgetting.   组件声明  1234567891011 &#x2F;&#x2F;纯组件const eg1 &#x3D; (&amp;#123;msg&amp;#125;:&amp;#123;message:string&amp;#125;)&#x3D;&gt;&lt;div&gt;&amp;#123;msg&amp;#125;&lt;&#x2F;div&gt;&#x2F;&#x2F;SFCconst eg2: R">
 <meta property="og:type" content="article">
 <meta property="og:title" content="React tips collection">
 <meta property="og:url" content="http://nico-m.github.io/2020/08/07/yuque/React%20tips%20collection/index.html">
 <meta property="og:site_name" content="Nico酱的小站">
-<meta property="og:description" content="Actrually they are some snippets in case of forgetting.   组件声明  1234567891011&#x2F;&#x2F;纯组件const eg1 &#x3D; (&amp;#123; msg &amp;#125;: &amp;#123; message: string &amp;#125;) &#x3D;&gt; &lt;div&gt;&amp;#123;msg&amp;#125;&lt;&#x2F;div&gt;;&#x2F;&#x2F;SFCcons">
+<meta property="og:description" content="Actrually they are some snippets in case of forgetting.   组件声明  1234567891011 &#x2F;&#x2F;纯组件const eg1 &#x3D; (&amp;#123;msg&amp;#125;:&amp;#123;message:string&amp;#125;)&#x3D;&gt;&lt;div&gt;&amp;#123;msg&amp;#125;&lt;&#x2F;div&gt;&#x2F;&#x2F;SFCconst eg2: R">
 <meta property="article:published_time" content="2020-08-07T06:56:09.000Z">
-<meta property="article:modified_time" content="2020-08-07T07:50:58.816Z">
+<meta property="article:modified_time" content="2021-04-03T05:30:18.867Z">
 <meta property="article:author" content="Nico M">
 <meta name="twitter:card" content="summary">
 
@@ -173,10 +173,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-08-07 14:56:09 / Modified: 15:50:58" itemprop="dateCreated datePublished" datetime="2020-08-07T14:56:09+08:00">2020-08-07</time>
+              <time title="Created: 2020-08-07 14:56:09" itemprop="dateCreated datePublished" datetime="2020-08-07T14:56:09+08:00">2020-08-07</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-03 13:30:18" itemprop="dateModified" datetime="2021-04-03T13:30:18+08:00">2021-04-03</time>
+              </span>
 
           
 
@@ -195,7 +201,7 @@
 <ol>
 <li>组件声明</li>
 </ol>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//纯组件</span></span><br><span class="line"><span class="keyword">const</span> eg1 = <span class="function">(<span class="params">&#123; msg &#125;: &#123; message: <span class="built_in">string</span> &#125;</span>) =&gt;</span> &lt;div&gt;&#123;msg&#125;&lt;<span class="regexp">/div&gt;;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/SFC</span></span><br><span class="line"><span class="regexp">const eg2: React.SFC&lt;Msg&gt; = (&#123; message, children &#125;) =&gt; &lt;div&gt;&#123;children&#125;&#125;&lt;/</span>div&gt;;</span><br><span class="line"><span class="comment">//class</span></span><br><span class="line"><span class="keyword">class</span> Eg <span class="keyword">extends</span> React.Component&lt;PropsType, StateType&gt; &#123;</span><br><span class="line">  <span class="comment">// const &#123;message = 'default'&#125; = this.props;  for function component</span></span><br><span class="line">  <span class="keyword">static</span> defaultProps: Partial&lt;PropsType&gt; = &#123;</span><br><span class="line">    key: value,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">//纯组件</span></span><br><span class="line"><span class="keyword">const</span> eg1 = <span class="function">(<span class="params">&#123;msg&#125;:&#123;message:<span class="built_in">string</span>&#125;</span>)=&gt;</span>&lt;div&gt;&#123;msg&#125;&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/SFC</span></span><br><span class="line"><span class="regexp">const eg2: React.SFC&lt;Msg&gt;=(&#123;message,children&#125;)=&gt;&lt;div&gt;&#123;children&#125;&#125;&lt;/</span>div&gt;</span><br><span class="line"><span class="comment">//class</span></span><br><span class="line"><span class="keyword">class</span> Eg <span class="keyword">extends</span> React.Component&lt;PropsType,StateType&gt;&#123;</span><br><span class="line">	<span class="comment">// const &#123;message = 'default'&#125; = this.props;  for function component</span></span><br><span class="line">	<span class="keyword">static</span> defaultProps: Partial&lt;PropsType&gt;=&#123;</span><br><span class="line">		key: value</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <a id="more"></a>
 
@@ -265,14 +271,18 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> res = input.filter(<span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">o</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (o.value.includes(<span class="string">"Hit"</span>)) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (o.children) &#123;</span><br><span class="line">    <span class="keyword">return</span> (o.children = o.children.filter(f)).length;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 <ol start="19">
-<li><p>几种类型的操作</p>
+<li><p>几种类型的操作:</p>
 </li>
 <li><p>Exclude 排除<br><code>Exclude&lt;keyof Props, keyof ExtractName&gt;</code> extractName 为想要排除掉的 props</p>
 </li>
-<li><p>Pick为只选用其中的一些属性<br><code>Pick&lt;User,&quot;name&quot;|&quot;age&quot;&gt;</code> 只选用 name 和 age 这两个属性</p>
+<li><p>Pick为只选用其中的一些属性</p>
+<p><code>Pick&lt;User,&quot;name&quot;|&quot;age&quot;&gt;</code> 只选用 name 和 age 这两个属性</p>
+</li>
+<li><p>复制文本并选中 <code>textarea$.select(); document.execCommand(&#39;copy&#39;);</code></p>
+</li>
+<li><p>bind,call,apply</p>
 </li>
 </ol>
-<p>20) 复制文本并选中 <code>textarea$.select(); document.execCommand(&#39;copy&#39;);</code><br>21) `bind,call,apply</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">var</span> car = &#123;</span><br><span class="line">      registrationNumber: <span class="string">"GA12345"</span>,</span><br><span class="line">      brand: <span class="string">"Toyota"</span>,</span><br><span class="line">      displayDetails: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">              <span class="built_in">console</span>.log(<span class="keyword">this</span>.registrationNumber + <span class="string">" "</span> + <span class="keyword">this</span>.brand);</span><br><span class="line">          &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1. bind 将会创建一个重新绑定this的函数</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">const</span> myCarDetail = car.displayDetails; <span class="comment">//这样的myCarDetail在调用时内部的this指向window</span></span><br><span class="line">	<span class="keyword">const</span> myCarDetailWithBind = car.displayDetails.bind(car); <span class="comment">//重新指定了this为car</span></span><br><span class="line">	<span class="keyword">const</span> myCarDetailBindParam = car.displayDetails.bind(car,args); <span class="comment">//需要传参的情况</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. call and apply</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> car = &#123;</span><br><span class="line">	    registrationNumber: <span class="string">"GA12345"</span>,</span><br><span class="line">	    brand: <span class="string">"Toyota"</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">displayDetails</span>(<span class="params">ownerName</span>) </span>&#123;</span><br><span class="line">	    <span class="built_in">console</span>.log(ownerName + <span class="string">", this is your car: "</span> + <span class="keyword">this</span>.registrationNumber + <span class="string">" "</span> + <span class="keyword">this</span>.brand);</span><br><span class="line">	&#125;</span><br><span class="line">	displayDetails.call(car,<span class="string">'nico'</span>)</span><br><span class="line">	displayDetails.apply(car,[<span class="string">'nico'</span>])</span><br><span class="line">	<span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">bind主要用于以一个指定的值做为一个函数的value.并没有执行,还可以借用和复用一个方法,</span></span><br><span class="line"><span class="string">  或者给一个方法赋给一个变量</span></span><br><span class="line"><span class="string">call,apply 第一个参数用于设置this, 后面的值作为参数传入函数,也可以借用函数,</span></span><br><span class="line"><span class="string">  方式更多样化.(类数组可以借用Array.prototype的方法,还有函数的参数arguments)</span></span><br></pre></td></tr></table></figure>
 
 <ol start="22">
@@ -437,7 +447,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -468,7 +478,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

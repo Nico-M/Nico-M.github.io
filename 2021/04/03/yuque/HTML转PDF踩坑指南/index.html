@@ -20,18 +20,18 @@
     var CONFIG = {"hostname":"nico-m.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Less as a pre-compile processor, is often used in our project.Mostly only small part is been taken advance of by us. Therefor I decide to have a deep exploit over it.  Css utils is very common either">
+  <meta name="description" content="近期的一个的需求,HTML 生成 PDF,整个过程让前端来实现,因为后端大神实在太忙. 网上搜索的一番,看到 有两种实现方式:  手动写入内容到 PDF, jsPDF支持文字图片写入然后直接生成 PDF,可以结合antoTable 更容易的展示表格 使用 html2pdf 这个库,其实现机理是 DOM &#x3D;&gt; IMAGE &#x3D;&gt; PDF  针对我们的实际情况,我们是要根据打印一个特定的页面">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Generate Css Utils by Less">
-<meta property="og:url" content="http://nico-m.github.io/2020/04/27/yuque/Generate%20Css%20Utils%20by%20Less/index.html">
+<meta property="og:title" content="HTML转PDF踩坑指南">
+<meta property="og:url" content="http://nico-m.github.io/2021/04/03/yuque/HTML%E8%BD%ACPDF%E8%B8%A9%E5%9D%91%E6%8C%87%E5%8D%97/index.html">
 <meta property="og:site_name" content="Nico酱的小站">
-<meta property="og:description" content="Less as a pre-compile processor, is often used in our project.Mostly only small part is been taken advance of by us. Therefor I decide to have a deep exploit over it.  Css utils is very common either">
-<meta property="article:published_time" content="2020-04-27T01:18:02.000Z">
-<meta property="article:modified_time" content="2021-04-03T05:30:18.963Z">
+<meta property="og:description" content="近期的一个的需求,HTML 生成 PDF,整个过程让前端来实现,因为后端大神实在太忙. 网上搜索的一番,看到 有两种实现方式:  手动写入内容到 PDF, jsPDF支持文字图片写入然后直接生成 PDF,可以结合antoTable 更容易的展示表格 使用 html2pdf 这个库,其实现机理是 DOM &#x3D;&gt; IMAGE &#x3D;&gt; PDF  针对我们的实际情况,我们是要根据打印一个特定的页面">
+<meta property="article:published_time" content="2021-04-03T04:09:58.000Z">
+<meta property="article:modified_time" content="2021-04-03T05:30:18.379Z">
 <meta property="article:author" content="Nico M">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://nico-m.github.io/2020/04/27/yuque/Generate%20Css%20Utils%20by%20Less/">
+<link rel="canonical" href="http://nico-m.github.io/2021/04/03/yuque/HTML%E8%BD%ACPDF%E8%B8%A9%E5%9D%91%E6%8C%87%E5%8D%97/">
 
 
 <script id="page-configurations">
@@ -44,7 +44,7 @@
   };
 </script>
 
-  <title>Generate Css Utils by Less | Nico酱的小站</title>
+  <title>HTML转PDF踩坑指南 | Nico酱的小站</title>
   
 
 
@@ -151,7 +151,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://nico-m.github.io/2020/04/27/yuque/Generate%20Css%20Utils%20by%20Less/">
+    <link itemprop="mainEntityOfPage" href="http://nico-m.github.io/2021/04/03/yuque/HTML%E8%BD%ACPDF%E8%B8%A9%E5%9D%91%E6%8C%87%E5%8D%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -164,7 +164,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Generate Css Utils by Less
+          HTML转PDF踩坑指南
         </h1>
 
         <div class="post-meta">
@@ -173,16 +173,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2020-04-27 09:18:02" itemprop="dateCreated datePublished" datetime="2020-04-27T09:18:02+08:00">2020-04-27</time>
+              <time title="Created: 2021-04-03 12:09:58 / Modified: 13:30:18" itemprop="dateCreated datePublished" datetime="2021-04-03T12:09:58+08:00">2021-04-03</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-03 13:30:18" itemprop="dateModified" datetime="2021-04-03T13:30:18+08:00">2021-04-03</time>
-              </span>
 
           
 
@@ -195,27 +189,33 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <blockquote>
-<p>Less as a pre-compile processor, is often used in our project.Mostly only small part is been taken advance of by us. Therefor I decide to have a deep exploit over it.</p>
-</blockquote>
-<p>Css utils is very common either when you are in your project or you are building a library. A majority of us must tried boot-css before. There are a lot of utilized css class-name. For instance: <code>text-center,font-sm</code> .</p>
-<a id="more"></a> 
+        <p>近期的一个的需求,HTML 生成 PDF,整个过程让前端来实现,因为后端大神实在太忙.</p>
+<p>网上搜索的一番,看到 有两种实现方式:</p>
+<ol>
+<li>手动写入内容到 PDF, <a href="https://parall.ax/products/jspdf" target="_blank" rel="noopener">jsPDF</a>支持文字图片写入然后直接生成 PDF,可以结合<a href="https://github.com/simonbengtsson/jsPDF-AutoTable" target="_blank" rel="noopener">antoTable</a> 更容易的展示表格</li>
+<li>使用 <a href="https://github.com/eKoopmans/html2pdf.js" target="_blank" rel="noopener"><em>html2pdf</em></a> 这个库,其实现机理是 DOM =&gt; IMAGE =&gt; PDF</li>
+</ol>
+<p>针对我们的实际情况,我们是要根据打印一个特定的页面,但是同时还会增加一些只会在 PDF 当中展示的内容,其实相当于新写了一个页面专门用于打印,打印的内容包括 chart 和 一些复杂的排版内容,给予这两点,第一种方法就被舍弃了.</p>
+<p>第二种方法实现的过程:</p>
+<ol>
+<li>我们使用的 react,所以我们新写了一个组件,在点击打印的时候载入,设置为不可见</li>
+<li>在页面 dom 渲染结束后调用 html2pdf 库,调用类似<br><code>html2pdf().set(option).from(element).save()</code></li>
+</ol>
+<p>下面就说一下使用后出现的问题和解决思路:</p>
+<ul>
+<li>我们的 table 过长,column 非常多,这就需要非常宽的页面支持,最后我们使用的自定义页面宽度</li>
+<li>PAGE-BREAK. 虽然支持 css 的 page-break,但是碰到 table 时候,就会直接从<code>tr</code> 断开,下一页让人无法对应每一列的内容.所以这里需要自己用 js 处理. 思路: 计算 table 在当前页面可以放多少行,然后就在边缘那一行增加一个 <code>tr</code> ,把 thead 的内容放进去,并在 <em>tr</em> 上加上 <em>break-before</em> 的类,这样就可以实现<em>table</em>分页并且<em>thead</em>也能在下一页继续使用</li>
+<li>分页: 这个可以在最后使用 setFont 给每一页写入页码```javascript worker.get(‘pdf’).then(pdf=&gt;{ const totalPage = pdf.internal.getNumberOfPages(); for(let j=1;j&lt;totalPage; j++){ pdf.setPage(j); pdf.setFontSize(20); pdf.text(<code>page ${j}</code>)<br>}<br>})</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- canvas超出限制,因为这个插件的机制就是先用canvas画出页面的,所以canvas会限制本插件的使用,canvas有一个最大像素的限制,一旦超过这个临界值,就会出现空白页面.使用的时候经常超过15页左右就出现这种问题,所以这个问题很严重.目前能找到的方法就是分page去渲染,就是把原来一整个页面分成几块分次打印.&#96;&#96;&#96;javascript</span><br><span class="line">const pages &#x3D; [...] &#x2F;&#x2F; 分块的html list</span><br><span class="line">let worker &#x3D; html2pdf()</span><br><span class="line">								.set(option)</span><br><span class="line">								.from(pages[0])</span><br><span class="line">								.toPdf()</span><br><span class="line">for(let i&#x3D;1; i&lt; pages.length;i++)&#123;</span><br><span class="line">	worker &#x3D; worder.get(&#39;pdf&#39;)</span><br><span class="line">								 .then(pdf&#x3D;&gt;&#123;</span><br><span class="line">								 		pdf.addPage()</span><br><span class="line">								 &#125;)</span><br><span class="line">								 .from(pages[i])</span><br><span class="line">								 .toContainer()</span><br><span class="line">								 .toCanvas()</span><br><span class="line">								 .toPdf()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>Recently I was coping with a project which has same demand.I have a <code>common.css</code> where put all the css utils in.All of the style is code by manually. I wish we can be more efficient. Then less is back to my eyes again.</p>
-<p>Usually we use the nesting feature,that’s really useful for us and saved a lot time for us of looking up the parent.</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.content</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">  <span class="selector-class">.list</span> &#123;</span><br><span class="line">    <span class="attribute">border-color</span>: blue;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>That’s pretty easy and easy to master. when it refers to some advanced feature,it get a little tricky.<br>For me , I prefer use another two feature: variable and namespace.</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@ns:</span> ex-css;</span><br><span class="line"><span class="selector-class">.@&#123;ns&#125;</span><span class="selector-tag">-name</span>&#123;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="selector-tag">&amp;</span><span class="selector-tag">-title</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1.8rem</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>whereas for create utils , these features are not enough. But Less offered us rich functions that can fulfill any requirements of us.</p>
-<p>variable variable: I like this feature, it make every variable are flexible, you can define any variable and make up to new variable.</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@primary:</span> green;</span><br><span class="line"><span class="variable">@secondary:</span> blue;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.section</span> &#123;</span><br><span class="line">  <span class="variable">@color:</span> primary;</span><br><span class="line"></span><br><span class="line">  <span class="selector-class">.element</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="variable">@@color</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>so now, I will take full use of it for generate my css utils.</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@position:</span>top,right,bottom,left;</span><br><span class="line"><span class="variable">@size:</span> xs,sm,md,lg;</span><br><span class="line"><span class="variable">@margin-left:</span>ml;<span class="variable">@margin-right:</span>mr;<span class="variable">@margin-top:</span>mt;<span class="variable">@margin-bottom:</span>mb;</span><br><span class="line"><span class="variable">@sm:</span> <span class="number">1em</span>; <span class="variable">@xs:</span> .<span class="number">5em</span>;<span class="variable">@md:</span><span class="number">1.5em</span>;<span class="variable">@lg:</span><span class="number">2em</span>;</span><br><span class="line"><span class="selector-class">.gen</span>(<span class="variable">@OldValue</span>)&#123;</span><br><span class="line">  <span class="selector-tag">each</span>(<span class="variable">@size</span>,&#123;</span><br><span class="line">    <span class="variable">@mg:</span> e(<span class="string">"margin-@&#123;OldValue&#125;"</span>);<span class="comment">// mg = margin-left</span></span><br><span class="line">    <span class="variable">@mgDir:</span> <span class="variable">@@mg</span>; <span class="comment">// variable variables</span></span><br><span class="line">    <span class="variable">@mg-class:</span> e(<span class="string">"@&#123;mgDir&#125;-@&#123;value&#125;"</span>);<span class="comment">//mg-class=ml-sm  e: transform 'ml-sm' to ml-sm</span></span><br><span class="line">    <span class="variable">@pd:</span> <span class="string">"padding-@&#123;OldValue&#125;"</span>; <span class="comment">// you have to use string to collocate variable</span></span><br><span class="line">    <span class="variable">@pd-class:</span> <span class="string">"@&#123;pd&#125;-@&#123;value&#125;"</span>;</span><br><span class="line">    <span class="selector-class">.@&#123;mg-class&#125;</span> &#123;</span><br><span class="line">      <span class="attribute">@&#123;mg&#125;</span>: <span class="variable">@@value</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">each</span>(<span class="variable">@position</span>,&#123;</span><br><span class="line">  <span class="selector-class">.gen</span>(<span class="variable">@value</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>Here is a note for me, I wish I can use it more smoothly at next time.</p>
+<p>使用这种方案仍然有两个 issue:</p>
+<ol>
+<li>渲染时间偏长,二十页左右的要两三分钟,这可能和 pdf 要重复执行 canvas 有关</li>
+<li>但分的小块里面,其大小仍然超过 canvas size 还是会出现空白页</li>
+</ol>
+<p>这个方案目前还没找到解决方案</p>
+<p>看来,做 PDF 这个事情还得找后端去做.</p>
 
     </div>
 
@@ -231,7 +231,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="http://nico-m.github.io/2020/04/27/yuque/Generate%20Css%20Utils%20by%20Less/" title="Generate Css Utils by Less">http://nico-m.github.io/2020/04/27/yuque/Generate Css Utils by Less/</a>
+    <a href="http://nico-m.github.io/2021/04/03/yuque/HTML%E8%BD%ACPDF%E8%B8%A9%E5%9D%91%E6%8C%87%E5%8D%97/" title="HTML转PDF踩坑指南">http://nico-m.github.io/2021/04/03/yuque/HTML转PDF踩坑指南/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -248,13 +248,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/04/26/yuque/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E5%88%B0Github/" rel="prev" title="自动化部署到Github">
-      <i class="fa fa-chevron-left"></i> 自动化部署到Github
+    <a href="/2020/08/07/yuque/Hooks%20%E8%A7%A3%E8%AF%BB/" rel="prev" title="Hooks 解读">
+      <i class="fa fa-chevron-left"></i> Hooks 解读
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/04/27/yuque/Vocabulary%20Enhance/" rel="next" title="Vocabulary Enhance">
-      Vocabulary Enhance <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -429,7 +426,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'Nico-M.github.io',
       owner       : 'Nico-M',
       admin       : ['Nico-M'],
-      id          : '4f615a3cfe7c55299bccea5671a29a25',
+      id          : '11b389675a28aadafdab89e44329eb3f',
         language: '',
       distractionFreeMode: true
     });
